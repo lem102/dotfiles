@@ -1,0 +1,6 @@
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = git@github.com:lem102/.emacs.d.git
+[submodule ".fvwm"]
+	path = .fvwm
+	url = git@github.com:lem102/.fvwm.git

@@ -1,0 +1,11 @@
+XF86MonBrightnessDown
+    brightnessctl set 10%-
+
+XF86MonBrightnessUp
+    brightnessctl set 10%+
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +10%

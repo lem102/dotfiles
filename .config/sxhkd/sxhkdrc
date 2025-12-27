@@ -1,11 +1,13 @@
+# Jacob's Simple X Hot Key Daemon Config
+
 XF86MonBrightnessDown
     brightnessctl set 10%-
 
 XF86MonBrightnessUp
     brightnessctl set 10%+
 
-XF86AudioLowerVolume
-    pactl set-sink-volume @DEFAULT_SINK@ -10%
-
 XF86AudioRaiseVolume
-    pactl set-sink-volume @DEFAULT_SINK@ +10%
+    pactl set-sink-volume @DEFAULT_SINK@ +10% && notify-send "$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+(?=%)' | head -n 1)"
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -10% && notify-send "$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+(?=%)' | head -n 1)"
